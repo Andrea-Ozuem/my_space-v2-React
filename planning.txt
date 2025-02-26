@@ -1,0 +1,35 @@
+values I need: 
+    tasks = [
+        {}
+    ] (state)
+    completedTasks = int (derived)
+    totalTasks = int (derived)
+    addTaskText = string (state)
+
+    user = {
+        name, (string)
+        awayTimezone, (dropdownList)
+        city, (for weather API)
+    }
+
+
+* when tasks updates, as recomputation is perfomed, new value of completed & total is calculated
+* hook to improve performance (useMemo, ...)
+* i need to integrate with spotify API
+* Ensure best practice, a11y, performance
+
+
+React router
+    settings page
+
+
+
+V2 (stage 2) - interacting with API
+models
+    tasks
+    users
+
+
+
+Nice to have additional functionality
+* export list & pin it on phone
