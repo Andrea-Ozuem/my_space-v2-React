@@ -33,3 +33,16 @@ models
 
 Nice to have additional functionality
 * export list & pin it on phone
+
+
+time Line
+Refactor Static version of App
+- Use dummy values gotten from data.js
+
+Add interactivity using state
+- 2 state variables: user (for user stats & settings) and tasks (to hold tasks created)
+
+
+Optimisation
+- useMemo
+- ...

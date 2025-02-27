@@ -13,7 +13,7 @@ export default function TaskContainer({ tasks, handleClickTask, handleSubmit, ha
             </div>
             <form onSubmit={handleSubmit} className='px-2 flex gap-3'>
                 <input name='description' type="text" className='order-2 border-b focus:outline-none focus:border-b-2 focus:border-secondary' placeholder='Add task' />
-                <button className='order-1 color-secondary text-xl' type='submit'>+</button>
+                <button className='order-1 text-secondary text-xl' type='submit'>+</button>
             </form>
         </div>
     )

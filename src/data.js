@@ -6,7 +6,7 @@ const tasks = [
     },
     {
         id: 2,
-        desc: "Shop for Chi Chi gift",
+        desc: "Take Brian for a walk",
         completed: 1
     },
 ]
