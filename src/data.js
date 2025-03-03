@@ -16,7 +16,8 @@ const user = {
     password: "xyz",
     firstName: "Andrea",
     last_name: "Ozuem",
-    city: 'Port Harcourt'
+    city: 'Port Harcourt',
+    awayTimeZone: 'Asia/Manila'
 }
 
 const weather = {

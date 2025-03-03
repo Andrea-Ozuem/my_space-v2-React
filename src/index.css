@@ -26,6 +26,22 @@
         font-family: 'Nunito', sans-serif;
         background-color: var(--color-dark);
     }
+
+    main {
+        @apply md:flex mt-6 justify-between w-[95%] mx-auto text-white;
+    }
+
+    h1 {
+        @apply text-3xl font-semibold text-white;
+    }
+
+    fieldset {
+        @apply border px-[3rem] py-[2rem] rounded-md;
+    }
+
+    fieldset legend {
+        @apply text-lg px-2;
+    }
 }
 
 
@@ -50,5 +66,9 @@
         animation-delay: .04s;
         -webkit-animation-delay: .04s;
         animation-fill-mode: backwards;
+    }
+
+    .settings-input-box input {
+        @apply border-2 border-white rounded-md text-white mb-3 w-[70%] py-1 mt-1 px-3;
     }
 }

@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
+import { useOutletContext } from 'react-router-dom'
 import WidgetHeading  from "./WidgetHeading"
 
 export default function Time() {
+    const { currentUser } = useOutletContext()
     const [homeTime, setHomeTime] = useState("")
     const [awayTime, setAwayTime] = useState("")
-    const [awayZone, setAwayZone] = useState("Asia/Manila")
+    const [awayZone, setAwayZone] = useState(() => currentUser.awayTimeZone)
 
     useEffect(() => {
         const updateTime = () => {
@@ -35,7 +37,7 @@ export default function Time() {
             <WidgetHeading name="TIME" />
             <div className="flex justify-between px-[3rem]">
                 <TimeValue name="Home" value={homeTime}/>
-                <div className="border-l-2"></div>
+                <div className="border-l-2 mx-2"></div>
                 <TimeValue name={awayZone} value={awayTime}/>
             </div>
         </div>
@@ -44,7 +46,7 @@ export default function Time() {
 
 function TimeValue({ name, value }) {
     return (
-        <div>
+        <div className="flex-1">
             <p className="font-semibold text-lg text-center">{name}</p>
             <p className="text-center">{value}</p>
         </div>

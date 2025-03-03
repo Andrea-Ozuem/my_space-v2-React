@@ -22,9 +22,22 @@ values I need:
 React router
     settings page
 
+### Timeline
+#### Generating Static version of My Space
+This involved translating previous HTML code to JSX components. In this section, i broke down the UI into components. Refactor Static version of App
+- Use dummy values gotten from data.js
 
 
-V2 (stage 2) - interacting with API
+#### Adding Interactving & State
+In this section, I decided which values should be state and not. Figured out the most efficient place (component) to store state values. This app used 2 state values
+* Tasks [{}]
+* Users {}
+
+Every other value was derived from state.
+
+
+
+V2 (stage 2) - interacting with DB API
 models
     tasks
     users
@@ -33,14 +46,6 @@ models
 
 Nice to have additional functionality
 * export list & pin it on phone
-
-
-time Line
-Refactor Static version of App
-- Use dummy values gotten from data.js
-
-Add interactivity using state
-- 2 state variables: user (for user stats & settings) and tasks (to hold tasks created)
 
 
 Optimisation

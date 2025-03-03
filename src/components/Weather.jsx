@@ -1,7 +1,25 @@
+import { useEffect } from "react";
 import WidgetHeading  from "./WidgetHeading"
 import { weather } from '../data'
 
 export default function Weather() {
+    const [weatherData, setWeatherData] = useState();
+
+    useEffect(() => {
+        const dataFetch = async () => {
+        const data = await (
+            await fetch(
+            'https://run.mocky.io/v3/d6155d63-938f-484c-8d87-6f918f126cd4',
+            )
+        ).json()
+
+        // set state when the data received
+        setWeatherData(data)
+        };
+
+        dataFetch();
+    }, []);
+
     return (
         <div className="widget">
             <WidgetHeading name="WEATHER" />
