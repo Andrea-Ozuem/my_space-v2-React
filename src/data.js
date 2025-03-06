@@ -14,7 +14,7 @@ const tasks = [
 const user = {
     email: "abc@gmail.com",
     password: "xyz",
-    firstName: "Andrea",
+    username: "Andrea",
     last_name: "Ozuem",
     city: 'Port Harcourt',
     awayTimeZone: 'Asia/Manila'

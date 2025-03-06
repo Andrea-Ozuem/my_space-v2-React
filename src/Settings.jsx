@@ -13,9 +13,8 @@ export default function Settings() {
 
         setCurrentUser(prevUser => ({
             ...prevUser,
-            firstName: data.firstName !== '' && data.firstName !== prevUser.firstName ? data.firstName : prevUser.firstName,
-            lastName: data.lastName !== '' && data.lastName !== prevUser.lastName ? data.lastName : prevUser.lastName,
-            city: data.city !== '' && data.city !== prevUser.city ? data.city : prevUser.city,
+            username: data.username !== '' && data.username !== prevUser.username ? data.username : prevUser.username,
+            name: data.name !== '' && data.name !== prevUser.name ? data.name : prevUser.name,
             awayTimeZone: data.tz !== '' && data.tz !== prevUser.awayTimeZone ? data.tz : prevUser.awayTimeZone
         }))
     }
@@ -28,16 +27,12 @@ export default function Settings() {
                     <fieldset className="mb-5">
                         <legend className="">User Info</legend>
                         <div className="settings-input-box mb-3">
-                            <label htmlFor="firstName">First Name</label>
-                            <div><input defaultValue={currentUser.firstName} className="" type="text" name="firstName" id="firstName" /></div>
+                            <label htmlFor="username">Username</label>
+                            <div><input defaultValue={currentUser.username} className="" type="text" name="username" id="username" /></div>
                         </div>
                         <div className="settings-input-box mb-3">
-                            <label htmlFor="lastName">Last Name</label>
-                            <div><input type="text" name="lastName" id="lastName" /></div>
-                        </div>
-                        <div className="settings-input-box mb-3">
-                            <label htmlFor="city">City</label>
-                            <div><input type="text" name="city" id="city" /></div>
+                            <label htmlFor="name">Full Name</label>
+                            <div><input type="text" name="name" id="name" /></div>
                         </div>
                     </fieldset>
 

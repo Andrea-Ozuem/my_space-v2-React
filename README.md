@@ -1,8 +1,32 @@
-# React + Vite
+# Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personalized weather dashboard that shows weather information based on user's location and preferences.
 
-Currently, two official plugins are available:
+## Features
+- Auto-detection of user's location using IP geolocation
+- Real-time weather data from OpenWeatherMap API
+- User settings persistence
+- Responsive design for all devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- React
+- Vite
+- TailwindCSS
+- OpenWeatherMap API
+- IP Geolocation API
+
+## Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Create `.env` file with your API keys:
+   ```
+   VITE_WEATHER_API_KEY=your_openweather_key
+   VITE_IP_KEY=your_ipgeolocation_key
+   ```
+4. Run development server: `npm run dev`
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

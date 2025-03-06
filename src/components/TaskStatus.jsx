@@ -8,7 +8,6 @@ export default function TaskStatus({ tasks, name }) {
 
     return (
         <>
-            <h1 className="text-4xl">Good morning,<br /> <span className='font-semibold'>{name}</span></h1>
             <div className="w-full bg-grey flex mb-8 mt-12 p-4 justify-between items-center rounded-2xl">
                 <div>
                     <p>Daily Tasks</p>
