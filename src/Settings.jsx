@@ -17,6 +17,7 @@ export default function Settings() {
             name: data.name !== '' && data.name !== prevUser.name ? data.name : prevUser.name,
             tz: data.tz !== '' && data.tz !== prevUser.tz ? data.tz : prevUser.tz
         }))
+        alert('User updated successfully')
     }
 
     return (
@@ -32,7 +33,7 @@ export default function Settings() {
                         </div>
                         <div className="settings-input-box mb-3">
                             <label htmlFor="name">Full Name</label>
-                            <div><input type="text" name="name" id="name" /></div>
+                            <div><input defaultValue={currentUser.name} type="text" name="name" id="name" /></div>
                         </div>
                     </fieldset>
 
@@ -42,7 +43,9 @@ export default function Settings() {
                         <label htmlFor="tz1">Home</label>
                         <select name="tz" id="tz" className="border rounded-md ms-3">
                             {
-                                intlTimezones.map(zone => <option key={zone} value={zone}> {zone}</option> )
+                                intlTimezones.map(zone => zone == currentUser.tz ?
+                                    <option key={zone} value={zone} selected>{zone}</option> :
+                                    <option key={zone} value={zone}> {zone}</option> )
                             }
                         </select>
                     </div> 
