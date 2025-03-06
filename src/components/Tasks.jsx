@@ -4,7 +4,6 @@ import { clsx } from 'clsx'
 import { useState,useEffect } from 'react'
 
 export default function Tasks({ tasks, handleClickTask }) {
-
     const checkBoxStyles = {
         color: '#554160'
     }

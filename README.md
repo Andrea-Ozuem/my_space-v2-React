@@ -11,6 +11,7 @@ A modern personal dashboard built with React that combines task management with 
 - Mark tasks as complete/incomplete
 - Visual progress indicator for task completion
 - Scrollable task list with clean UI
+- Clear all completed tasks from list
 
 ### Weather Widget
 - Real-time weather data using OpenWeatherMap API
@@ -79,34 +80,17 @@ npm run dev
 ### Environment Variables
 - `VITE_WEATHER_API_KEY`: Your OpenWeatherMap API key
 
-### User Settings
-Users can configure:
-- Username
-- Full Name
-- Home timezone
-- Away timezone
 
-## 📱 Responsive Design
+## Improvements
 
-The dashboard is fully responsive with three main breakpoints:
-- Mobile: < 768px (widgets in side panel)
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-## 🔒 Privacy Considerations
-
-- Geolocation access is requested with user permission
-- No personal data is stored on external servers
-- Weather data is fetched using secure HTTPS
-
-## 🚀 Performance Optimizations
+### 🚀 Performance Optimizations
 
 - Lazy loading of components
 - Memoization of expensive calculations
 - Efficient re-rendering with proper React hooks usage
 - Optimized asset loading
 
-## 🐛 Error Handling
+### 🐛 Error Handling
 
 - Comprehensive error boundary implementation
 - Graceful fallbacks for API failures
@@ -133,6 +117,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📫 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+Andrea Ozuem - [@globalAndrea_](https://twitter.com/globalAndrea_) - andreaozuem2021@gmail.com
 
-Project Link: [https://github.com/yourusername/myspace-dashboard](https://github.com/yourusername/myspace-dashboard)
+[Project Link](https://my-space-refactored.netlify.app/)

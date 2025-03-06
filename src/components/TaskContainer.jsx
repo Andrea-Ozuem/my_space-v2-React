@@ -20,7 +20,7 @@ export default function TaskContainer() {
     }, [])
 
     function handleClear() {
-        setTasks([])
+        setTasks(prevTasks => prevTasks.filter(task => !task.completed))
     }
 
           
