@@ -15,7 +15,7 @@ export default function Settings() {
             ...prevUser,
             username: data.username !== '' && data.username !== prevUser.username ? data.username : prevUser.username,
             name: data.name !== '' && data.name !== prevUser.name ? data.name : prevUser.name,
-            awayTimeZone: data.tz !== '' && data.tz !== prevUser.awayTimeZone ? data.tz : prevUser.awayTimeZone
+            tz: data.tz !== '' && data.tz !== prevUser.tz ? data.tz : prevUser.tz
         }))
     }
 

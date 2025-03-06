@@ -51,7 +51,7 @@ export default function TaskContainer() {
             <TaskStatus tasks={tasks} />
 
             <div className="bg-primary mb-8 p-4 text-black rounded-2xl">
-                <div className="flex justify-between mb-3">
+                <div className="flex justify-between mb-4">
                     <h2 className="h2 text-xl font-semibold">My Tasks</h2>
                     <button className="text-secondary font-light" onClick={handleClear}>clear</button>
                 </div>

@@ -29,6 +29,7 @@ export default function Layout() {
             'https://jsonplaceholder.typicode.com/users/1',
           )
         ).json();
+        data.tz = 'Asia/Manila'
 
         console.log(data)
         setCurrentUser(data);

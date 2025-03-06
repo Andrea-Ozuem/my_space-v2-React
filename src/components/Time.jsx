@@ -6,7 +6,7 @@ export default function Time() {
     const { currentUser } = useOutletContext()
     const [homeTime, setHomeTime] = useState("")
     const [awayTime, setAwayTime] = useState("")
-    const [awayZone, setAwayZone] = useState(() => currentUser.awayTimeZone)
+    const awayZone = currentUser.tz
 
     useEffect(() => {
         const updateTime = () => {
@@ -18,7 +18,7 @@ export default function Time() {
           setHomeTime(`${hours}:${minutes} ${ampm}`)
     
           // Away Time (using selected time zone)
-          const awayNow = new Date().toLocaleString("en-US", { timeZone: awayZone })
+          const awayNow = new Date().toLocaleString("en-US", { timeZone: currentUser.tz })
           const awayDate = new Date(awayNow)
           const awayHours = awayDate.getHours()
           const awayMinutes = awayDate.getMinutes().toString().padStart(2, "0");
@@ -30,7 +30,7 @@ export default function Time() {
         const interval = setInterval(updateTime, 1000)
     
         return () => clearInterval(interval)
-    }, [awayZone])
+    }, [currentUser.tz])
 
     return (
         <div className="widget">

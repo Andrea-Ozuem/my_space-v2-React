@@ -10,7 +10,7 @@ export default function Tasks({ tasks, handleClickTask }) {
     }
 
     return (
-        <ul className='scrollbar-hide h-full overflow-y-auto '>
+        <ul className='scrollbar-hide h-full overflow-y-auto hide-scrollbar'>
             {tasks.map(task => (
                 <li key={task.id} className='mb-6 px-2'>
                     <input type="checkbox" id={task.id} className='opacity-0 absolute' onChange={()=> handleClickTask(task.id)}/>
