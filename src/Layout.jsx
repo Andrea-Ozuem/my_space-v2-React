@@ -1,7 +1,6 @@
 import { useState, useEffect, createContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './components/Header'
-import MySpace from './components/MySpace'
 
 export const SideBarContext = createContext(null)
 

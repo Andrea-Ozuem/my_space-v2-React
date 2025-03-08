@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom"
 import SettingsIcon from '@mui/icons-material/Settings'
 import WidgetsIcon from '@mui/icons-material/Widgets'
+import { isMobile } from '../utils'
 
 export default function Header({ handleSideBar }) {
     const widgetStyle = {color: '#313131'}
-    
-    function isMobile() {
-        const minWidth = 768; // Minimum width for desktop devices
-        return window.innerWidth < minWidth || screen.width < minWidth;
-    }
-          
-    
 
     return (
         <header className="bg-primary text-white py-3">

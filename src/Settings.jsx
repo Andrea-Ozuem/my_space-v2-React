@@ -1,5 +1,6 @@
 import { useOutletContext } from 'react-router-dom'
-
+import Widgets from "./components/Widgets"
+import { isMobile } from './utils'
 export default function Settings() {
     const { currentUser, setCurrentUser } =  useOutletContext()
 
@@ -21,8 +22,8 @@ export default function Settings() {
     }
 
     return (
-        <main className="width-[70%]">
-            <div className="w-full md:w-[60%] mx-auto">
+        <main>
+            <div className="w-full md:w-[60%] max-w-full mx-auto">
                 <h1 className="mb-5 text-center">Edit User Settings</h1>
                 <form action="" className="w-full" onSubmit={handleUserSubmit}>
                     <fieldset>
@@ -41,7 +42,7 @@ export default function Settings() {
                         <legend>Choose Your Timezones</legend>
                         <div className="tz1 settings-input-box">
                             <label htmlFor="tz1">Home</label>
-                            <select name="tz" id="tz" className="border rounded-md ms-3">
+                            <select name="tz" id="tz" className="border w-full rounded-md ms-3">
                                 {
                                     intlTimezones.map(zone => zone == currentUser.tz ?
                                         <option key={zone} value={zone} selected>{zone}</option> :
@@ -66,6 +67,10 @@ export default function Settings() {
                     <input id="submit" className='bg-primary rounded-md mt-5 py-2 text-black px-3' type="submit" value="Update"></input>
                 </form>
             </div>
+            <div className="middle"></div>
+            {
+                isMobile() ? <Widgets /> : null
+            }
         </main>
     )
 }

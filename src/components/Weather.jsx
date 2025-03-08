@@ -2,15 +2,9 @@ import { useEffect, useState } from "react"
 import WidgetHeading from "./WidgetHeading"
 import { defaultPosition } from '../data'
 
-const DEFAULT_COORDS = {
-    latitude: 40.7128,
-    longitude: -74.0060
-}
-
 export default function Weather() {
     const [weatherData, setWeatherData] = useState(null)
     const [error, setError] = useState(null)
-    const [locationStatus, setLocationStatus] = useState('pending')
 
     useEffect(() => {
         const fetchWeatherData = async (latitude, longitude) => {
