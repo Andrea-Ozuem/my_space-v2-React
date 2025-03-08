@@ -83,6 +83,10 @@ npm run dev
 
 ## Improvements
 
+### Features
+
+- Implement Spotify API
+
 ### 🚀 Performance Optimizations
 
 - Lazy loading of components

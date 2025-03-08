@@ -30,8 +30,7 @@ export default function Weather() {
                     fetchWeatherData(latitude, longitude);
                 },
                 (err) => {
-                    setError('Unable to get location');
-                    console.error(err);
+                    setError('Unable to get location')
                 }
             );
         } else {

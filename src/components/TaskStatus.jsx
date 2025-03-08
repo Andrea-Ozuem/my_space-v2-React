@@ -1,7 +1,7 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-export default function TaskStatus({ tasks, name }) {
+export default function TaskStatus({ tasks }) {
     const total = tasks.length 
     const completed = tasks.filter((task) => task.completed == 1).length
     const percentage = total == 0 ? 0 : Math.round(completed/total * 100)

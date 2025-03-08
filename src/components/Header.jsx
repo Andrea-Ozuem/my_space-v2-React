@@ -11,6 +11,7 @@ export default function Header({ handleSideBar }) {
                 <ul className="flex">
                     <li className='me-1'>
                         <Link to="settings">
+                            <span className="sr-only">Settings</span>
                             <SettingsIcon sx={widgetStyle}/>
                         </Link>
                     </li>
@@ -18,6 +19,7 @@ export default function Header({ handleSideBar }) {
                         null :
                          <li className='md:hidden block'>
                             <button onClick={handleSideBar}>
+                            <span className="sr-only">Widgets</span>
                                 <WidgetsIcon sx={widgetStyle} />
                             </button>
                         </li>

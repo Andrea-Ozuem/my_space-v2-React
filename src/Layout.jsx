@@ -31,7 +31,6 @@ export default function Layout() {
         ).json();
         data.tz = 'Asia/Manila'
 
-        console.log(data)
         setCurrentUser(data);
       };
   
