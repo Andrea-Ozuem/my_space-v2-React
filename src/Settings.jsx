@@ -25,7 +25,7 @@ export default function Settings() {
             <div className="w-full md:w-[60%] mx-auto">
                 <h1 className="mb-5 text-center">Edit User Settings</h1>
                 <form action="" className="w-full" onSubmit={handleUserSubmit}>
-                    <fieldset className="mb-5">
+                    <fieldset>
                         <legend className="">User Info</legend>
                         <div className="settings-input-box mb-3">
                             <label htmlFor="username">Username</label>
@@ -38,18 +38,31 @@ export default function Settings() {
                     </fieldset>
 
                     <fieldset>
-                    <legend>Choose Your Timezones</legend>
-                    <div className="tz1 settings-input-box">
-                        <label htmlFor="tz1">Home</label>
-                        <select name="tz" id="tz" className="border rounded-md ms-3">
-                            {
-                                intlTimezones.map(zone => zone == currentUser.tz ?
-                                    <option key={zone} value={zone} selected>{zone}</option> :
-                                    <option key={zone} value={zone}> {zone}</option> )
-                            }
-                        </select>
-                    </div> 
+                        <legend>Choose Your Timezones</legend>
+                        <div className="tz1 settings-input-box">
+                            <label htmlFor="tz1">Home</label>
+                            <select name="tz" id="tz" className="border rounded-md ms-3">
+                                {
+                                    intlTimezones.map(zone => zone == currentUser.tz ?
+                                        <option key={zone} value={zone} selected>{zone}</option> :
+                                        <option key={zone} value={zone}> {zone}</option> )
+                                }
+                            </select>
+                        </div> 
                     </fieldset>
+
+                    <fieldset>
+                        <legend>Choose Default Weather Position</legend>
+                        <div className="lat settings-input-box">
+                            <label htmlFor="lat">Latitude: </label>
+                            <input className='ms-3' type="number" name="lat" id="lat" />
+                        </div> 
+                        <div className="long settings-input-box">
+                            <label htmlFor="long">Longitude: </label>
+                            <input className='ms-3' type="number" name="long" id="long" />
+                        </div> 
+                    </fieldset>
+
                     <input id="submit" className='bg-primary rounded-md mt-5 py-2 text-black px-3' type="submit" value="Update"></input>
                 </form>
             </div>

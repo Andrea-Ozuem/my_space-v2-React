@@ -28,5 +28,11 @@ const weather = {
     "desc": "light rain",
     "city": "Port Harcourt"
 }
-export {tasks, user, weather} 
+
+const defaultPosition = {
+    latitude: 40.7128,
+    longitude: -74.0060
+}
+
+export {tasks, user, weather, defaultPosition} 
 

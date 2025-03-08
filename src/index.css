@@ -36,7 +36,7 @@
     }
 
     fieldset {
-        @apply border px-[3rem] py-[2rem] rounded-md;
+        @apply border px-[3rem] py-[2rem] rounded-md mb-6;
     }
 
     fieldset legend {
@@ -71,6 +71,7 @@
     .settings-input-box input {
         @apply border-2 border-white rounded-md text-white mb-3 w-[70%] py-1 mt-1 px-3;
     }
+
 }
 
 @layer utilities {

@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react"
-import { useOutletContext } from 'react-router-dom'
 import WidgetHeading from "./WidgetHeading"
+import { defaultPosition } from '../data'
+
+const DEFAULT_COORDS = {
+    latitude: 40.7128,
+    longitude: -74.0060
+}
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState(null)
-    const { currentUser } = useOutletContext()
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(null)
+    const [locationStatus, setLocationStatus] = useState('pending')
 
     useEffect(() => {
         const fetchWeatherData = async (latitude, longitude) => {
@@ -14,11 +19,11 @@ export default function Weather() {
                 const response = await fetch(
                     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
                 );
-                const data = await response.json();
-                setWeatherData(data);
+                const data = await response.json()
+                setWeatherData(data)
             } catch (err) {
-                setError('Failed to fetch weather data');
-                console.error(err);
+                console.error(err)
+                setError('Failed to fetch weather data')
             }
         };
 
@@ -26,27 +31,43 @@ export default function Weather() {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    const { latitude, longitude } = position.coords;
-                    fetchWeatherData(latitude, longitude);
+                    const { latitude, longitude } = position.coords
+                    fetchWeatherData(latitude, longitude)
                 },
                 (err) => {
-                    setError('Unable to get location')
+                    setError(`Unable to get location: ${err.message}`)
+                    fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
                 }
             );
         } else {
-            setError('Geolocation is not supported by your browser');
+            setError("Geolocation is not supported. Using default location.")
+            fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
         }
+
+        // Cleanup
+        return () => {
+            setWeatherData(null);
+            setError(null);
+        };
     }, []);
 
-    if (error) return <div className="widget">
-        <WidgetHeading name="WEATHER" />
-        <p className="text-center text-red-500">{error}</p>
-    </div>;
+    if (!weatherData) {
+        return (
+            <div className="widget">
+                <WidgetHeading name="WEATHER" />
+                <p className="text-center">Loading weather data...</p>
+            </div>
+        )
+    }
 
-    if (!weatherData) return <div className="widget">
-        <WidgetHeading name="WEATHER" />
-        <p className="text-center">Loading weather data...</p>
-    </div>;
+    if (error && !weatherData) {
+        return (
+            <div className="widget">
+                <WidgetHeading name="WEATHER" />
+                <p className="text-center text-red-500">{error}</p>
+            </div>
+        );
+    }
 
     return (
         <div className="widget">
