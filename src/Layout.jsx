@@ -37,7 +37,7 @@ export default function Layout() {
   }, []);
 
   return (
-    <div>
+    <div className='w-full h-screen lg:fixed relative'>
       <SideBarContext.Provider value={isSideOpen}>
         <Header handleSideBar={() => setIsSideOpen(!isSideOpen)} />
           <Outlet context={{ currentUser, setCurrentUser }}/>

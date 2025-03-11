@@ -70,6 +70,7 @@ export default function TaskContainer() {
                     <input name='description' type="text" className='order-2 border-b focus:outline-none focus:border-b-2 focus:border-secondary' placeholder='Add task' />
                     <button className='order-1 text-secondary text-xl' type='submit'>+</button>
                 </form>
+               
             </div>
         </>
     )

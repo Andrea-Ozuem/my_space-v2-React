@@ -18,6 +18,8 @@ export default function Weather() {
             } catch (err) {
                 console.error(err)
                 setError('Failed to fetch weather data')
+            } finally {
+                console.log(weatherData)
             }
         };
 
@@ -29,21 +31,29 @@ export default function Weather() {
                     fetchWeatherData(latitude, longitude)
                 },
                 (err) => {
-                    setError(`Unable to get location: ${err.message}`)
+                    alert(`Unable to get location: ${err.message}`)
                     fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
                 }
             );
         } else {
-            setError("Geolocation is not supported. Using default location.")
+            alert("Geolocation is not supported. Using default location.")
             fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
         }
 
         // Cleanup
         return () => {
             setWeatherData(null);
-            setError(null);
         };
     }, []);
+
+    if (error && !weatherData) {
+        return (
+            <div className="widget">
+                <WidgetHeading name="WEATHER" />
+                <p className="text-center text-red-500">{error}</p>
+            </div>
+        );
+    }
 
     if (!weatherData) {
         return (
@@ -54,14 +64,7 @@ export default function Weather() {
         )
     }
 
-    if (error && !weatherData) {
-        return (
-            <div className="widget">
-                <WidgetHeading name="WEATHER" />
-                <p className="text-center text-red-500">{error}</p>
-            </div>
-        );
-    }
+    
 
     return (
         <div className="widget">

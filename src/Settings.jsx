@@ -1,6 +1,6 @@
 import { useOutletContext } from 'react-router-dom'
 import Widgets from "./components/Widgets"
-import { isMobile } from './utils'
+import { isMobile } from './utils/utils'
 export default function Settings() {
     const { currentUser, setCurrentUser } =  useOutletContext()
 
@@ -23,7 +23,7 @@ export default function Settings() {
 
     return (
         <main>
-            <div className="w-full md:w-[60%] max-w-full mx-auto">
+            <div className="w-full lg:w-[60%] max-w-full mx-auto">
                 <h1 className="mb-5 text-center">Edit User Settings</h1>
                 <form action="" className="w-full" onSubmit={handleUserSubmit}>
                     <fieldset>

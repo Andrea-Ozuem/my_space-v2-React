@@ -8,7 +8,7 @@ import Calendar from './Calendar'
 export default function Widgets() {
     const isSideOpen = useContext(SideBarContext)
     return (
-        <section className={clsx("w-full sm:w-[20rem] md:block hidden max-w-40em", {'pane': isSideOpen})}>
+        <section className={clsx("w-full sm:w-[20rem] lg:block hidden max-w-40em", {'pane': isSideOpen})}>
             <Calendar />
             <Time />
             <Weather />

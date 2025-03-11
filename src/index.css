@@ -28,7 +28,7 @@
     }
 
     main {
-        @apply md:flex mt-6 justify-between w-[95%] mx-auto text-white;
+        @apply lg:flex mt-6 justify-between w-[95%] mx-auto text-white;
     }
 
     h1 {

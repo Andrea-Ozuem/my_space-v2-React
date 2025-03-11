@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import SettingsIcon from '@mui/icons-material/Settings'
 import WidgetsIcon from '@mui/icons-material/Widgets'
-import { isMobile } from '../utils'
+import { isMobile } from '../utils/utils'
 
 export default function Header({ handleSideBar }) {
     const widgetStyle = {color: '#313131'}
@@ -19,7 +19,7 @@ export default function Header({ handleSideBar }) {
                     </li>
                     {
                         isMobile() ?
-                            <li className='md:hidden block'>
+                            <li className='lg:hidden block'>
                                 <button onClick={handleSideBar}>
                                     <span className="sr-only">Widgets</span>
                                     <WidgetsIcon sx={widgetStyle} />
