@@ -23,8 +23,6 @@ export default function Spotify() {
           getToken(spotifyCode)
           
         } else if (error != null) {
-            // display error message in div
-            console.error(error)
             alert(error.message)
             setError(error)
         }
@@ -202,7 +200,7 @@ export default function Spotify() {
 
     function renderSpotify() {
         if (isLoading) {
-            return <div>Loading...</div>;
+            return <div className='text-center bg-inherit'>Loading...</div>;
         }
 
         if (error) {
@@ -229,7 +227,7 @@ export default function Spotify() {
     }
 
     return (
-        <div className="pb-6 lg:w-[22rem] w-full center h-[150px]">            
+        <div className="lg:pb-6 lg:w-[22rem] w-full center h-[120px]">            
             {renderSpotify()}
         </div>
     )

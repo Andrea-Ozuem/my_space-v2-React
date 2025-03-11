@@ -16,10 +16,7 @@ export default function Weather() {
                 const data = await response.json()
                 setWeatherData(data)
             } catch (err) {
-                console.error(err)
                 setError('Failed to fetch weather data')
-            } finally {
-                console.log(weatherData)
             }
         };
 
@@ -31,12 +28,10 @@ export default function Weather() {
                     fetchWeatherData(latitude, longitude)
                 },
                 (err) => {
-                    alert(`Unable to get location: ${err.message}`)
                     fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
                 }
             );
         } else {
-            alert("Geolocation is not supported. Using default location.")
             fetchWeatherData(defaultPosition.latitude, defaultPosition.longitude)
         }
 
