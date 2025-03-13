@@ -48,7 +48,6 @@ export default function Spotify() {
               })
             
               const data = await response.json()
-              console.log(data)
               return data.id
         } catch (err) {
             setError(err.message)
@@ -159,7 +158,6 @@ export default function Spotify() {
             const body = await fetch(url, payload);
             const response = await body.json();
             if (response.access_token) {
-                console.log(response)
             
                 localStorage.setItem('access_token', response.access_token);
                 localStorage.setItem('refresh_token', response.refresh_token);
@@ -208,18 +206,14 @@ export default function Spotify() {
         }
 
         if (playlistId) {
-            console.log('id is here')
             return playListIframe(playlistId)
         }
         
         if (accessToken && !isTokenExpired()) {
-            console.log('no id yet')
             getPlaylist()
         } else if (isTokenExpired()) {
-            console.log('expired')
             return getRefreshToken()
         } else {
-            console.log('verify plsss')
             return (
                 <LinkToSpotify handleSpotify={handleSpotify} />
             )

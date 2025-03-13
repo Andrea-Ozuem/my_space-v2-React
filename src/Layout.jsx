@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from 'react'
 import { Outlet } from 'react-router-dom'
+import {clsx} from 'clsx'
 import Header from './components/Header'
 
 export const SideBarContext = createContext(null)
@@ -37,7 +38,7 @@ export default function Layout() {
   }, []);
 
   return (
-    <div className='w-full h-screen lg:fixed relative'>
+    <div className='w-full  relative'>
       <SideBarContext.Provider value={isSideOpen}>
         <Header handleSideBar={() => setIsSideOpen(!isSideOpen)} />
           <Outlet context={{ currentUser, setCurrentUser }}/>

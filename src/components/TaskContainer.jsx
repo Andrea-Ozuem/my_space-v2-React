@@ -3,19 +3,18 @@ import TaskStatus from './TaskStatus'
 import Task from './Task'
 
 export default function TaskContainer() {
-    const [tasks, setTasks] = useState(() => [])
+    const [tasks, setTasks] = useState([])
     
     useEffect(() => {
         const fetchTasks = async () => {
           const data = await (
             await fetch(
-              'https://jsonplaceholder.typicode.com/users/1/todos?_start=10&_limit=8',
+              'https://jsonplaceholder.typicode.com/users/1/todos?_limit=7',
             )
           ).json()
-
-          setTasks(data);
+          setTasks(data)
         }
-        fetchTasks();
+        fetchTasks()
     }, [])
 
     function handleClear() {
@@ -29,6 +28,7 @@ export default function TaskContainer() {
                 task
         ))
     }, [])
+
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -55,11 +55,13 @@ export default function TaskContainer() {
                 </div>
 
                 <div className='mb-4 max-h-[340px] overflow-hidden flex flex-col'>
-                    <ul className='scrollbar-hide h-full overflow-y-auto hide-scrollbar'>
+                    <ul className='h-full overflow-y-auto hide-scrollbar'>
                         {tasks.map(task => (
                             <Task 
                                 key={task.id}
-                                task={task} 
+                                completed={task.completed}
+                                title={task.title}
+                                id={task.id}
                                 handleClickTask={handleClickTask}
                             />
                         ))}

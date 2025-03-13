@@ -22,8 +22,8 @@ export default function Settings() {
     }
 
     return (
-        <main>
-            <div className="w-full lg:w-[60%] max-w-full mx-auto">
+        <main className='flex flex-col overflow-hidden'>
+            <div className="w-full lg:w-[60%] max-w-full mx-auto h-full overflow-y-auto">
                 <h1 className="mb-5 text-center">Edit User Settings</h1>
                 <form action="" className="w-full" onSubmit={handleUserSubmit}>
                     <fieldset>
@@ -45,7 +45,7 @@ export default function Settings() {
                             <select name="tz" id="tz" className="border w-full rounded-md ms-3">
                                 {
                                     intlTimezones.map(zone => zone == currentUser.tz ?
-                                        <option key={zone} value={zone} selected>{zone}</option> :
+                                        <option key={zone} value={zone} defaultValue={true}>{zone}</option> :
                                         <option key={zone} value={zone}> {zone}</option> )
                                 }
                             </select>

@@ -21,6 +21,7 @@
     }
 }
 
+
 @layer base {
     body {
         font-family: 'Nunito', sans-serif;
@@ -71,7 +72,6 @@
     .settings-input-box input {
         @apply border-2 border-white rounded-md text-white mb-3 w-[70%] py-1 mt-1 px-3;
     }
-
 }
 
 @layer utilities {
@@ -79,7 +79,8 @@
       -ms-overflow-style: none;  /* Internet Explorer 10+ */
         scrollbar-width: none;  /* Firefox */
     }
+
     .hide-scrollbar::-webkit-scrollbar { 
         display: none;  /* Safari and Chrome */
     }
-  }
+}
