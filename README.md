@@ -31,10 +31,14 @@ A modern personal dashboard built with React that combines task management with 
 - Dynamic calendar generation
 - Supports leap year calculations
 
+### Spotify Playlist Widget
+
+- Links app to User Spotify account using PKCE extension
+- Fetches and displays a random playlist
+
 ### Additional Features
 - Responsive design (mobile-first approach)
 - Side panel for widgets on mobile view
-- User settings persistence
 - Clean, modern UI with Tailwind CSS
 - Error boundary implementation for robust error handling
 
@@ -83,23 +87,16 @@ npm run dev
 
 ## Improvements
 
-### Features
-
-- Implement Spotify API
-
 ### 🚀 Performance Optimizations
 
-- Lazy loading of components
 - Memoization of expensive calculations
 - Efficient re-rendering with proper React hooks usage
-- Optimized asset loading
 
 ### 🐛 Error Handling
 
 - Comprehensive error boundary implementation
 - Graceful fallbacks for API failures
 - User-friendly error messages
-- Network error recovery
 
 ## 🤝 Contributing
 
