@@ -8,7 +8,6 @@ const Task = memo(function Task({id, completed, title, handleClickTask }) {
         color: '#554160'
     }
     
-    console.log('Task with id:', id, ' rendered at ', new Date().toLocaleTimeString())
     return (
             <li key={id} className='mb-6 px-2'>
                 <input type="checkbox" id={id} className='opacity-0 absolute' onChange={()=> handleClickTask(id)}/>

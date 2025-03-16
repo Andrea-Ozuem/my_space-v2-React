@@ -220,6 +220,8 @@ export default function Spotify() {
         }
     }
 
+    console.log(redirectUri)
+
     return (
         <div className="lg:pb-6 lg:w-[22rem] w-full center h-[120px]">            
             {renderSpotify()}
