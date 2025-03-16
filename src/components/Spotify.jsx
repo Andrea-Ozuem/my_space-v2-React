@@ -120,7 +120,6 @@ export default function Spotify() {
                     throw new Error(response.error_description)
                 }
             } catch (err) {
-                console.error(err)
                 localStorage.removeItem('refresh_token')
                 localStorage.removeItem('access_token')
                 localStorage.removeItem('expires_in')
@@ -219,8 +218,6 @@ export default function Spotify() {
             )
         }
     }
-
-    console.log(redirectUri)
 
     return (
         <div className="lg:pb-6 lg:w-[22rem] w-full center h-[120px]">            
