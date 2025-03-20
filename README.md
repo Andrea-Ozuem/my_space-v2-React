@@ -2,7 +2,7 @@
 
 A modern personal dashboard built with React that combines task management with useful widgets including weather, dual timezone clock, and calendar functionality.
 
-![MySpace Dashboard](/src/assets/screenshot.png) <!-- You should add a screenshot of your app here -->
+![MySpace Dashboard](/screenshot.png) <!-- You should add a screenshot of your app here -->
 
 ## 🌟 Features
 

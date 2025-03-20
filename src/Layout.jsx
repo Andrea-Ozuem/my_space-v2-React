@@ -1,6 +1,5 @@
 import { useState, useEffect, createContext } from 'react'
 import { Outlet } from 'react-router-dom'
-import {clsx} from 'clsx'
 import Header from './components/Header'
 
 export const SideBarContext = createContext(null)

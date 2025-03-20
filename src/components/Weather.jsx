@@ -16,7 +16,7 @@ export default function Weather() {
                 const data = await response.json()
                 setWeatherData(data)
             } catch (err) {
-                setError('Failed to fetch weather data')
+                setError('Failed to fetch weather data', err)
             }
         };
 
