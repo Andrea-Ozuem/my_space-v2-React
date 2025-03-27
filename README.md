@@ -7,6 +7,7 @@ A modern personal dashboard built with React that combines task management with 
 ## 🌟 Features
 
 ### Task Management
+
 - Create and manage daily tasks
 - Mark tasks as complete/incomplete
 - Visual progress indicator for task completion
@@ -14,18 +15,21 @@ A modern personal dashboard built with React that combines task management with 
 - Clear all completed tasks from list
 
 ### Weather Widget
+
 - Real-time weather data using OpenWeatherMap API
 - Auto-detection of user's location
 - Displays temperature, humidity, wind speed, and pressure
 - Fallback handling for location access denial
 
 ### Time Widget
+
 - Dual timezone display
 - Configurable home and away timezones
 - Uses the Intl API for accurate timezone handling
 - Real-time updates
 
 ### Calendar Widget
+
 - Monthly calendar view
 - Current date highlighting
 - Dynamic calendar generation
@@ -37,6 +41,7 @@ A modern personal dashboard built with React that combines task management with 
 - Fetches and displays a random playlist
 
 ### Additional Features
+
 - Responsive design (mobile-first approach)
 - Side panel for widgets on mobile view
 - Clean, modern UI with Tailwind CSS
@@ -49,8 +54,9 @@ A modern personal dashboard built with React that combines task management with 
 - **Styling**: TailwindCSS
 - **Routing**: React Router v6
 - **State Management**: React Hooks
-- **APIs**: 
+- **APIs**:
   - OpenWeatherMap (weather data)
+  - Spotify API
 - **UI Components**: Material-UI Icons
 - **Additional Libraries**:
   - react-circular-progressbar
@@ -59,22 +65,26 @@ A modern personal dashboard built with React that combines task management with 
 ## 📦 Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/myspace-dashboard.git
+git clone https://github.com/Andrea-Ozuem/myspace-dashboard.git
 cd myspace-dashboard
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create a `.env` file in the root directory:
+
 ```env
 VITE_WEATHER_API_KEY=your_openweather_api_key
 ```
 
 4. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -82,8 +92,8 @@ npm run dev
 ## 🔧 Configuration
 
 ### Environment Variables
-- `VITE_WEATHER_API_KEY`: Your OpenWeatherMap API key
 
+- `VITE_WEATHER_API_KEY`: Your OpenWeatherMap API key
 
 ## Improvements
 
@@ -97,18 +107,6 @@ npm run dev
 - Comprehensive error boundary implementation
 - Graceful fallbacks for API failures
 - User-friendly error messages
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
