@@ -82,7 +82,7 @@ npm install
 ```env
 VITE_WEATHER_API_KEY=your_openweather_api_key
 VITE_SPOTIFY_CLIENT_ID=spotify_client_id
-VITE_SPOTIFY_CLIENT_SECRET`=spotify_client_secret
+VITE_SPOTIFY_CLIENT_SECRET=spotify_client_secret
 VITE_REDIRECT_URI=spotify_redirect_uri
 ```
 
