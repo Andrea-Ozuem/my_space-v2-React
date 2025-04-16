@@ -1,6 +1,6 @@
 # MySpace - Personal Dashboard
 
-A modern personal dashboard built with React that combines task management with useful widgets including weather, dual timezone clock, and calendar functionality.
+A modern personal dashboard built with React that combines task management with useful widgets including weather, dual timezone clock, music playlist, and calendar functionality.
 
 ![MySpace Dashboard](/screenshot.png) <!-- You should add a screenshot of your app here -->
 
@@ -81,6 +81,9 @@ npm install
 
 ```env
 VITE_WEATHER_API_KEY=your_openweather_api_key
+VITE_SPOTIFY_CLIENT_ID=spotify_client_id
+VITE_SPOTIFY_CLIENT_SECRET`=spotify_client_secret
+VITE_REDIRECT_URI=spotify_redirect_uri
 ```
 
 4. Start the development server:
@@ -94,6 +97,9 @@ npm run dev
 ### Environment Variables
 
 - `VITE_WEATHER_API_KEY`: Your OpenWeatherMap API key
+- `VITE_SPOTIFY_CLIENT_ID`: Spotify Client Id
+- `VITE_SPOTIFY_CLIENT_SECRET`: Spotify Client Secret
+- `VITE_REDIRECT_URI`: Redirect URI for Spotify
 
 ## Improvements
 
